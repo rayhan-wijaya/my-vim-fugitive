@@ -2905,9 +2905,9 @@ function! fugitive#BufReadStatus(...) abort
         call s:AddHeader('Error', s:worktree_error)
       endif
     endif
-    if get(fugitive#ConfigGetAll('advice.statusHints', config), 0, 'true') !~# '^\%(false\|no|off\|0\|\)$'
-      call s:AddHeader('Help', 'g?')
-    endif
+    " if get(fugitive#ConfigGetAll('advice.statusHints', config), 0, 'true') !~# '^\%(false\|no|off\|0\|\)$'
+    "   call s:AddHeader('Help', 'g?')
+    " endif
 
     call s:AddSection('Rebasing ' . rebasing_head, rebasing)
     call s:AddSection('Untracked', untracked)
