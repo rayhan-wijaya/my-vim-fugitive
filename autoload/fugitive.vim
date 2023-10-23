@@ -7688,7 +7688,7 @@ function! s:MapGitOps(is_ftplugin) abort
   if &modifiable
     return ''
   endif
-  exe s:Map('n', 'c<Space>', ':Git commit<Space>', '', ft)
+  exe s:Map('n', 'c<Space>', ':Git commit<Space>-m "', '', ft)
   exe s:Map('n', 'c<CR>', ':Git commit<CR>', '', ft)
   exe s:Map('n', 'cv<Space>', ':tab Git commit -v<Space>', '', ft)
   exe s:Map('n', 'cv<CR>', ':tab Git commit -v<CR>', '', ft)
